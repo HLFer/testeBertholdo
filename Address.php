@@ -24,7 +24,8 @@ class Address
          */
 
         $cep = preg_replace("/[^0-9]/", "", $cep);
-        $url = "http://viacep.com.br/ws$cep/xml/";
+        //Necessário incluir uma '/' na url
+        $url = "http://viacep.com.br/ws/$cep/xml/";
 
         $xml = simplexml_load_file($url);
         //Logradouro, bairro, uf estão em $xml?
