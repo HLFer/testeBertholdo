@@ -21,7 +21,7 @@ class Address
         $url = "http://viacep.com.br/ws/$cep/xml/";
         //Interpreta um arquivo XML em forma de objeto
         $xml = simplexml_load_file($url);
-        //logradouro, bairro, uf estão em $xml
+        //logradouro, bairro, uf estão em $xmls
         return $xml;
     }
 

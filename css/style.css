@@ -1,12 +1,14 @@
-h1{
-  font-style: italic;
+body {
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
 }
-#fundo{
-  background-color: #a3a9fa;
+
+main {
+ flex: 1 0 auto;
 }
-.paragrafo{
-  color: red;
+.grad {
+ background-image: linear-gradient(to right,#43416d  ,  #9f57a8,#fb7751);
 }
-.paragrafo2{
-  color: #0018ff;
-}
+.roxo {
+background-image: linear-gradient(to right,#43416d  , #9f57a8);}
