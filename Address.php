@@ -15,8 +15,6 @@ class Address
          *
          * @return xml
          */
-
-
          
 	    /*
          *Necessário criação das variáveis para exibição na index.php
@@ -28,6 +26,11 @@ class Address
         $url = "http://viacep.com.br/ws/$cep/xml/";
 
         $xml = simplexml_load_file($url);
+
+        //$logradouro = $xml[];
+        //$bairro = $xml[];
+        //$uf = $xml[];
+
         //Logradouro, bairro, uf estão em $xml?
         var_dump($xml);
         exit;

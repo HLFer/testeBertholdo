@@ -40,7 +40,7 @@ if (!empty($_POST['cep'])) {
 	echo "Rua: $address->logradoro<br>";
 	echo "Bairro: $address->bairro<br>";
 	//Varável $adress escrita errada - faltando 'd', deveria ser $address
-	echo "Estado: $adress->uf<br>";
+	echo "Estado: $address->uf<br>";
 }
 
 //Fechamento da TAG de PHP - Não aconselhável
