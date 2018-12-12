@@ -24,14 +24,15 @@ include_once('Address.php');
 if (!empty($_POST['cep'])) {
 
 	$cep = $_POST['cep'];
+	
 	//Chamada ao método get_address está incorreta, deveria ser utilizada com o $this->
 	//Variável passada como parâmetro deveria ser $cep e não $cp
 	//Deve-se criar o Objeto antes de iniciar a chamada ao método get_address
-	//Não é necessário incluir '()', pois a construct não possui argumentos e não realiza nenhuma operação
-	$address = new Adress;
-	$address->get_address($cep);
+	$address = (new Address)->get_address($cep);	
+	
 	/*Também pode ser utilizada desta forma:
-	 * $address = (new Address)->get_address($cep);	
+	 * $address = new Adress;
+	 * $address->get_address($cep);s
 	 * Tornando o código mais limpo e de fácil entendimento
 	 */
 
@@ -44,4 +45,3 @@ if (!empty($_POST['cep'])) {
 }
 
 //Fechamento da TAG de PHP - Não aconselhável
-?>
